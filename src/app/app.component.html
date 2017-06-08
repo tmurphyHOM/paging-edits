@@ -1,0 +1,32 @@
+﻿  <div style="padding: 40px;">
+    <h1>Modification to softsimon/angular-2-dropdown-multiselect</h1>
+    <h3> For paging support</h3>
+
+    <form [formGroup]="myForm">
+      <ss-multiselect-dropdown formControlName="ssmdOne" [options]="multiSelectOptions" [texts]="multiSelectLabels"
+                               [settings]="multiSelectSettings" [(ngModel)]="optionsModel"
+                               (onPageFilter)="onPageFilterEmitted($event)"></ss-multiselect-dropdown>
+    </form>
+
+    <div style="padding: 20px;">
+      <button type="button" class="btn btn-default btn-sm" (click)="loadItems(10)" title="Load 10 items">Load 10 items</button>
+      <button type="button" class="btn btn-default btn-sm" (click)="loadItems(30)" title="Load 30 items">Load 30 items</button>
+      <button type="button" class="btn btn-default btn-sm" (click)="loadItems(100)" title="Load 100 items">Load 100 items</button>
+      <button type="button" class="btn btn-default btn-sm" (click)="loadItems(600)" title="Load 600 items">Load 600 items</button>
+      <br />
+      <br />
+      <label class="checkbox-inline">
+        <input type="checkbox" [(ngModel)]="mimicPaging" (click)="updatePaging()" [disabled]="itemCount > 30">Mimic Paging
+      </label>
+    </div>
+    <h5>Dev Information:</h5>
+    <ul>
+      <li>Mimic Paging is set to autoselect if item count > 30</li>
+      <li>Paging is set to ignore when item count is 10 or less</li>
+      <li>Above settings are external to the drop down component </li>
+      <li>Reference app.component.ts for settings and simulation of paged data retrieval.</li>
+      <li>Added a setting so subsequent loads of the drop down will uncheck all. </li>
+      <li>Default for submit is on the filter icon button</li>
+      <li>No visual or disabling for loading</li>
+    </ul>
+  </div>
