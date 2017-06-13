@@ -5,9 +5,7 @@ h1 {
 }
 
 .app-dropdown-container {
-  margin: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  margin-left: 100px;
 }
 .app-glyphicon-primary {
   color: #0088cb;   
@@ -20,6 +18,8 @@ h1 {
 
 .app-dropdown-paging-info {
   padding-left: 4px;
+  padding-top: 2px;
   padding-right: 4px;
+  font-size: x-small;
 
 }

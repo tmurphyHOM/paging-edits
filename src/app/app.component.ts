@@ -36,7 +36,8 @@ export class AppComponent implements OnInit {
     defaultTitle: 'Find...',
     allSelected: 'All selected',
     /*new text for drop down*/
-    findHelpText: 'Use Find and Filter to search full list.'
+    findHelpText: 'Use Find and Filter to search full list.',
+    findTitle: 'Run Filter'
   };
 
   ngOnInit() {
@@ -106,7 +107,7 @@ export class AppComponent implements OnInit {
       buttonClasses: 'btn btn-default btn-block',
       fixedTitle: false,
       itemClasses: '',
-      containerClasses: 'dropdown-inline', //default is 'dropdown-inline'
+      containerClasses: 'dropdown-inline ', //default is 'dropdown-inline'
       dynamicTitleMaxItems: 4,
       selectionLimit: 0,
       closeOnSelect: false,
@@ -120,7 +121,7 @@ export class AppComponent implements OnInit {
       totalItems: 0,
       itemsPerPage: 0,
       showPagingInfo: true,
-      searchButtonClasses: 'btn btn-xs ',
+      searchButtonClasses: 'btn btn-xs btn-default btn-block',
       searchGlyphiconClasses: 'fa fa-filter app-glyphicon-primary',
       pageInfoClasses: 'app-dropdown-paging-info ',
       uncheckAllOnReload: true

@@ -99,7 +99,8 @@ export class MultiselectDropdown implements OnInit, OnChanges, DoCheck, ControlV
     searchPlaceholder: 'Search...',
     defaultTitle: 'Select',
     allSelected: 'All selected',
-    findHelpText: 'Use Find to locate within all records.'
+    findHelpText: 'Use Find to locate within all records.',
+    findTitle: 'Run Filter'
   };
 
   constructor(private element: ElementRef,
